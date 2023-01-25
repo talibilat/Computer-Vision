@@ -18,3 +18,5 @@ Inside the constructor, it loads the Hands and drawing_utils solutions from medi
 __find_hands__: This method takes an image and a boolean value as input and returns the image with drawn landmarks on the detected hands. It first converts the image from BGR to RGB format, then it processes the image using the process method of the Hands class which returns the results containing the landmarks of the detected hands.
 
 __find_position__: This method takes an image and an integer value as input and returns the list of landmarks of the hands. It takes the results obtained from the process method of the Hands class and iterates through the landmarks of each hand, extracting the x and y
+![image](https://user-images.githubusercontent.com/71158426/214707091-accc5d1f-ae81-402d-b730-17eb0e2822d5.png)
+![Hand Tracking](https://user-images.githubusercontent.com/71158426/214707136-fde06e50-c62b-4ecf-9e9e-4613af46c6d5.png)
