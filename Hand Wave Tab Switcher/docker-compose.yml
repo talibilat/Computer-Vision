@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  gesture-tab-switcher:
+    build: .
+    container_name: hand-gesture-tab-switcher
+    privileged: true  # Required for camera access
+    network_mode: host  # Required for X11 forwarding
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw  # X11 socket for GUI
+      - /dev/video0:/dev/video0  # Camera device
+      - ~/.Xauthority:/root/.Xauthority:rw  # X11 authentication
+    devices:
+      - /dev/video0:/dev/video0  # Explicit camera device mapping
+    stdin_open: true
+    tty: true 
